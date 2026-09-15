@@ -83,8 +83,10 @@ def apply_standardizer(X, mean, std):
     # TODO: Return the scaled matrix (X - mean) / std via broadcasting.
     return (X-mean)/std
 
-# Step 9 - add_bias_column (not yet solved)
-# TODO: implement
+# Step 9 - add_bias_column
+def add_bias_column(X):
+    # TODO: Prepend a column of ones to a 2-D feature matrix X...
+    return np.concatenate([np.ones((X.shape[0],1)), X], axis=1)
 
 # Step 10 - make_shuffled_indices (not yet solved)
 # TODO: implement

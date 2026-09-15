@@ -154,8 +154,15 @@ def r_squared(y_true, y_pred):
     sst=np.sum((y_true-mean)**2)
     return 1-(ssr/sst) if sst!=0.0 else 0
 
-# Step 18 - residual_summary (not yet solved)
-# TODO: implement
+# Step 18 - residual_summary
+def residual_summary(y_true, y_pred):
+    # TODO: Return a compact dict summarizing prediction residuals...
+    r= y_true-y_pred
+    return {
+        "mean": np.mean(r),
+        "std": np.std(r),
+        "median_abs": np.median(np.abs(r))
+    }
 
 # Step 19 - prepare_cleaned_features (not yet solved)
 # TODO: implement
